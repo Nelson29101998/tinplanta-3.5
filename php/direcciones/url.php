@@ -1,7 +1,7 @@
 <?php 
     //Heroku
-    //$local = "https://tinplanta.herokuapp.com";
+    $local = "https://tinplanta.herokuapp.com";
 
     //Xampp
-    $local = "http://localhost/dashboard/tinplanta";
+    //$local = "http://localhost/dashboard/tinplanta";
 ?>
