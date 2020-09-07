@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" class="full-height">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="../css/fondopantalla-style.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+    </style>
+    <title>Olvido la Contraseña / Forgot Password</title>
+    <link rel="icon" href="../icon/logotin.png">
+</head>
+
+<body>
+    <div class="container d-flex h-100">
+        <div class="row align-self-center w-100">
+            <div class="mx-auto">
+                <center>
+                    <h1>Olvido de tu contraseña / Forgot your password</h1>
+                    <main>
+                        <div class="container">
+                            <form name="olvido" id="olvido" method="POST" onsubmit="return formula()"
+                                action="../php/olvido/olvido.php">
+                                <div class="jumbotron" style="background-color: limegreen">
+                                    <div class="form-group">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="font-weight-bold align-middle" scope="col"
+                                                        style="text-align: right;">
+                                                        Tú Correo / Your Mail:
+                                                    </th>
+                                                    <td>
+                                                        <input type="email" class="form-control" name="correo"
+                                                            id="correo" placeholder="Ingrese su nombre" maxlength="255">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <input type="submit" class="btn btn-green" name="enviar" id="enviar" value="Ok">
+                                    <a href="../index.php"><button type="button"
+                                            class="btn btn-green">Volver / Back</button></a>
+                                </div>
+                            </form>
+                        </div>
+                    </main>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function formula(){
+            var cor = document.forms['olvido']['correo'].value;
+
+            if(cor == "" || cor == null){
+                alert("Introduzca su Correo");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
